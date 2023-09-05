@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins';
+  font-size: 400;
+  color: black;
+  line-height: 1.5;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  overflow-x: hidden;
+}
+
+/* Primary header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: hsl(0 0% 100% / 0.1);
+  backdrop-filter: blur(.5rem);
+}
+
+.primary-navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-inline-end: .75em;
+}
+
+.hero-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.0);
+  color: white;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.video-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+h1 {
+  color: black;
+  font-size: 5rem;
+}
+
+.intro {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  padding: 0.15px;
+}
+
+/* General */
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    gap: 2em;
+
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+
+    transform: translateX(100%);
+  }
+
+  .primary-navigation[data-visible='true'] {
+    transform: translateX(0%);
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+    background: url(../assets/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    width: 2rem;
+    border: 0;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .mobile-nav-toggle span {
+    display: none;
+  }
+
+  h1 {
+    display: none;
+  }
+}
