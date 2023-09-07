@@ -18,33 +18,39 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 /* Primary header */
 
-header {
+/* header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-}
+} */
 
-.logo {
+/* .logo {
   margin: 2rem;
   font-size: 3rem;
-}
+} */
 
-.primary-header {
+/* .primary-header {
   align-items: center;
   justify-content: space-between;
-}
+} */
 
-.mobile-nav-toggle {
+/* .mobile-nav-toggle {
   display: none;
-}
+} */
 
 .primary-navigation {
-  list-style: none;
+  /* list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0; */
   background: hsl(0 0% 100% / 0.1);
   backdrop-filter: blur(.5rem);
 }
@@ -59,12 +65,12 @@ header {
   margin-inline-end: .75em;
 }
 
-.hero-container {
+/* .hero-container {
   height: 100vh;
   width: 100vw;
-}
+} */
 
-.hero {
+/* .hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,9 +81,9 @@ header {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-}
+} */
 
-.video-bg {
+/* .video-bg {
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -85,12 +91,12 @@ header {
   transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
-}
+} */
 
-h1 {
+/* h1 {
   color: black;
   font-size: 5rem;
-}
+} */
 
 .intro {
   text-align: center;
@@ -109,10 +115,10 @@ h1 {
 
 /* General */
 
-.flex {
+/* .flex {
   display: flex;
   gap: 1rem;
-}
+} */
 
 svg {
   width: 3rem;
