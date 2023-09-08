@@ -8,56 +8,135 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Borel&family=Kumbh+Sans:wght@400;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="normalize.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
-  <script src="script.js" defer></script>
   <title>Produits eco-logiques SG</title>
 </head>
 
 <body>
   
-  <header class="flex items-center justify-between fixed top-0 left-0 w-full container">
-    <!-- logo -->
-    <div class="m-8 text-5xl">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-        <path d="M272 96c-78.6 0-145.1 51.5-167.7 122.5c33.6-17 71.5-26.5 111.7-26.5h88c8.8 0 16 7.2 16 16s-7.2 16-16 16H288 216s0 0 0 0c-16.6 0-32.7 1.9-48.2 5.4c-25.9 5.9-50 16.4-71.4 30.7c0 0 0 0 0 0C38.3 298.8 0 364.9 0 440v16c0 13.3 10.7 24 24 24s24-10.7 24-24V440c0-48.7 20.7-92.5 53.8-123.2C121.6 392.3 190.3 448 272 448l1 0c132.1-.7 239-130.9 239-291.4c0-42.6-7.5-83.1-21.1-119.6c-2.6-6.9-12.7-6.6-16.2-.1C455.9 72.1 418.7 96 376 96L272 96z"/>
-      </svg>
-    </div>
-
-    <button id="mobile-nav-toggle" 
-      class="mobile-nav-toggle block" 
-      aria-controls="primary-navigation" 
-      aria-expanded="false">
-        <span class="sr-only">Menu</span>
-    </button>
+  <header>
+    <!-- Navigation bar -->
+    <nav
+      class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+      data-te-navbar-ref>
+      <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <div class="flex items-center">
+          <!-- Hamburger menu button -->
+          <button
+            class="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
+            type="button"
+            data-te-collapse-init
+            data-te-target="#navbarSupportedContentX"
+            aria-controls="navbarSupportedContentX"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!-- Hamburger menu icon -->
+            <span class="[&>svg]:w-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-7 w-7">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </span>
+          </button>
+        </div>
   
-    <nav>
-      <!-- primary-navigation -->
-      <ul id="primary-navigation" 
-        data-visible="false" 
-        class="primary-navigation flex list-none p-0 m-0">
-        <li class="active">
-          <a href="index.html">
-            <span aria-hidden="true">00</span>Accueil
-          </a>
-        </li>
-        <li class="active">
-          <a href="index.html">
-            <span aria-hidden="true">01</span>A Propos
-          </a>
-        </li>
-        <li class="active">
-          <a href="stats.html">
-            <span aria-hidden="true">02</span>Stats
-          </a>
-        </li>
-        <li class="active">
-          <a href="index.html">
-            <span aria-hidden="true">03</span>Kune Kune
-          </a>
-        </li>
-      </ul>
+        <!-- Navigation links -->
+        <div
+          class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContentX"
+          data-te-collapse-item>
+          <ul
+            class="mr-auto flex flex-col lg:flex-row"
+            data-te-navbar-nav-ref>
+            <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                href="index.html"
+                data-te-nav-link-ref
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                >Accueil</a
+              >
+            </li>
+            <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                href="stats.html"
+                data-te-nav-link-ref
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                >Statistiques</a
+              >
+            </li>
+            <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                href="animaux.html"
+                data-te-nav-link-ref
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                >Animaux</a
+              >
+            </li>
+            <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                href="#jsv"
+                data-te-nav-link-ref
+                data-te-ripple-init
+                data-te-ripple-color="light"
+                >Services</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
+  
+    <!-- Hero section with background image, heading, subheading and button -->
+    <div
+      class="relative overflow-hidden bg-cover bg-no-repeat"
+      style="
+        background-position: 50%;
+        height: 350px;
+      ">
+      <div class="bg"/>
+        <img src="./assets/img/nature-3133508_1920.jpg"
+        alt="" 
+        style="
+          top: 50%;
+          left: 50%;
+          transform: translate(0, -50%);
+        ">
+      </div>
+      <div
+        class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+        style="background-color: rgba(0, 0, 0, 0.5)">
+        <div class="flex h-full items-center justify-center">
+          <div class="px-6 text-center text-white md:px-12">
+            <h1 class="mb-6 text-5xl font-bold">Heading</h1>
+            <h3 class="mb-8 text-3xl font-bold">Subeading</h3>
+            <button
+              type="button"
+              class="inline-block rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+              data-te-ripple-init
+              data-te-ripple-color="light">
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -79,51 +158,80 @@
         </div>
       </div>
     </section>
-    <section class="photos">
-      <div class="grid grid-cols-12">
-        <div class="col-span-3">
-          <img src="./assets/img/kunekune-1816715_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/kunekune-2298145_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/kunekune-4962022_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/kunekune-4962027_640.jpg" alt="kune-kune">
-        </div>
-
-        <div class="col-span-3">
-          <img src="./assets/img/kunekune-6486992_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/pig-6376698_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/piggy-5240704_640.jpg" alt="kune-kune">
-        </div>
-        <div class="col-span-3">
-          <img src="./assets/img/pigs-6371082_640.jpg" alt="kune-kune">
-        </div>
-      </div>
+    
+    <section class="carousel">
+      
     </section>
-    <section class="jsv">
-      <h2 class="text-2xl">Autres branches</h2>
-      <div class="grid grid-cols-12">
-        <div class="col-span-6 flex flex-col justify-center">
-          <img class="w-3/6" src="./assets/img/logo-jsv.png" alt="">
-          <h3 class="mx-auto text-2xl">Entreprise JSV</h3>
-          <p>Nos jeunes bouvillons de descendance Angus, sont élevés jusqu’à maturité avec leur mère dans de verts pâturages. Milieu paisible, calme et naturel nourris à l’herbe. C’est d’ailleurs ce qui en fait une viande tendre de qualité supérieure.  Viande vieillie à la perfection afin de vous assurer la tendreté pour un meilleur goût.</p>
-          <button class="bg-sky-500 rounded-full w-40 p-3">Nous Joindre</button>
+
+    <section id="jsv" class="jsv">
+      <!-- component -->
+      <div class="flex flex-col bg-white py-4 px-12">
+        <div class="py-4">
+            <div class="pl-[116px] pr-[205px] py-8">
+                <div class="text-7xl text-black">Nos autres branches</div>
+                <div class="lead-xl font-light">Quand vous en savez plus, vous grandissez plus.</div>
+            </div>
         </div>
-        <div class="col-span-6 flex flex-col justify-center">
-          <img class="w-3/6" src="./assets/img/logo-forest.png" alt="">
-          <h3 class="mx-auto text-2xl">Les Boisés de l' Avenir inc.</h3>
-          <p>Propriétaire terriend et expert en gestion de terre agricole et forestiere. les boises de lavenir inc. detiennent de nombreux lots de terre et en acquiert des dixaines tout les ans. Si vous désirez vous départir de votre terre vous pouvez nous joindre ci-desous</p>
-          <button class="bg-sky-500 rounded-full w-40 p-3">Nous Joindre</button>
-        </div>
+      <div class="flex flex-col px-20 md:px-10 md:flex-row items-center justify-center gap-6">
+        <div>
+            <img src="./assets/img/cow-3454611_1280.jpg" alt="Featured Image 1" class="rounded-t-xl"/>
+            <div class="px-9 pt-10 pb-14 bg-yellow-500 rounded-b-lg">
+                <div class="text-white space-y-4">
+                    <h3 class="text-xl font-bold lead-xl bold">Entreprise JSV</h3>
+                    <div class="text-lg font-light">Nos jeunes bouvillons de descendance Angus, sont élevés jusqu’à maturité avec leur mère dans de verts pâturages. Viande vieillie à la perfection afin de vous assurer la tendreté pour un meilleur goût.</div>
+                </div>
+                <div class="flex justify-between pt-8">
+                    <ul class="flex flex-col gap-y-2.5">
+                        <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">milieu paisible</span>
+                        </li>
+                            <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">nourris à l’herbe</span>
+                        </li>
+                            <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">qualité supérieure</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-col justify-end">
+                        <a href="#" class="py-3 px-6 bg-white text-primary-200 paragraph-m  rounded-full">En Savoir Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="">
+            <img src="https://cdn.pixabay.com/photo/2023/08/15/11/47/mushroom-8191823_1280.jpg" alt="Featured Image 1" class="rounded-t-xl"/>
+            <div class="px-9 pt-10 pb-14 bg-lime-700 rounded-b-lg">
+                <div class="text-white space-y-4">
+                    <h3 class="text-xl font-bold lead-xl bold">Les Boisés de l' Avenir inc.</h3>
+                    <div class="text-lg font-light">La gestion durable de terres agricoles et de l’eau est fondamentale pour la sécurité alimentaire dans le monde, en particulier dans le contexte des conditions météorologiques de plus en plus imprévisibles.</div>
+                </div>
+                <div class="flex justify-between pt-8">
+                  <ul class="flex flex-col gap-y-2.5">
+                        <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">achats</span>
+                        </li>
+                            <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">ventes</span>
+                        </li>
+                            <li class="flex space-x-3 text-white">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked--v1.png" alt="checked--v1" class="w-6 h-6"/>
+                            <span class="paragraph-l font-bold">expertise</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-col justify-end">
+                        <a href="#" class="py-3 px-6 bg-white text-primary-200 paragraph-m  rounded-full">En Savoir Plus</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
       </div>
+      </div>
+
     </section>
   </main>
 
