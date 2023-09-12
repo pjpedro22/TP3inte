@@ -22,6 +22,17 @@
   <script src="tailwind.config.js"></script>
   <script src="form.js"></script>
   <script src="service-worker.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+        .then((reg) => {
+          console.log('Service worker registered.', reg);
+        });
+      });
+    }
+  </script>
   <title>Produits eco-logiques SG</title>
 </head>
 
@@ -327,14 +338,4 @@
   </footer>
 
 </body>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('service-worker.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg);
-      });
-    });
-  }
-</script>
 </html>
