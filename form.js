@@ -9,7 +9,6 @@ const validateForm = () => {
 
   const nameValue = name.value.trim();
   const lastnameValue = lastname.value.trim();
-  const genderValue = gender.value.trim();
   const phoneValue = phone.value.trim();
   const emailValue = email.value.trim();
   const birthdateValue = birthdate.value.trim();
