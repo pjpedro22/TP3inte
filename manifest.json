@@ -11,7 +11,8 @@
     {
       "src": "assets/img/192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "assets/img/512.png",
@@ -19,7 +20,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "https://pjpedro22.github.io/TP3inte/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "ffffff",
   "theme_color": "#2f3BA2"
