@@ -7,7 +7,7 @@
       "src": "/assets/img/144.png",
       "sizes": "144x144",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
     {
       "src": "/assets/img/192.png",
