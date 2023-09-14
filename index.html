@@ -20,9 +20,9 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
-  <script src="form.js"></script>
-  <script src="service-worker.js"></script>
-  <script src="install.js"></script>
+  <script src="form.js" defer></script>
+  <script src="service-worker.js" defer></script>
+  <script src="install.js" defer></script>
 
   <script>
     if ('serviceWorker' in navigator) {
@@ -111,7 +111,7 @@
               >
             </li>
             <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-              <button class="nav-link px-lg-4 px-2 hidden" id="butInstall" aria-label="Install">
+              <button class="nav-link px-lg-4 px-2" id="butInstall" aria-label="Install" hidden>
                 Installer la PWA
               </button>
             </li>
